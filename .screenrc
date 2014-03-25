@@ -1,0 +1,28 @@
+shell -$SHELL
+
+caption string "%?%F%{= Bk}%? %C%A %D %d-%m-%Y %{= kB} %t%= %?%F%{= Bk}%:%{= wk}%? %n "
+hardstatus alwayslastline
+
+defscrollback 20000
+
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t %h %?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %Y/%m/%d %c%{W} %l %{g}]'
+
+autodetach on
+
+defutf8 on
+startup_message off
+vbell off 
+
+# to find control keys: "cat > /dev/null" then hit them
+# alt-left: prev
+bindkey ^[b prev
+
+# alt-right: next
+bindkey ^[f next
+
+# alt-up: prev split
+#bindkey ^[[A focus prev
+
+# alt-down: next split
+#bindkey ^[[B focus next
