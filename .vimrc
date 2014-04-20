@@ -1,10 +1,18 @@
 " turn on syntax highlighting
-:syntax on
 
 "Pathogen plugin
-filetype off
-call pathogen#runtime_append_all_bundles()
+execute pathogen#infect()
+syntax on
 filetype plugin indent on
+
+" Tab highlight plugin
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors=0
+hi IndentGuidesOdd ctermbg=233
+hi IndentGuidesEven ctermbg=234
+
+" Local .vimrc: save settings when uppercase
+let g:localvimrc_persistent = 1
 
 set nocompatible
 set encoding=utf-8
