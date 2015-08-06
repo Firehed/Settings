@@ -1,5 +1,3 @@
-" turn on syntax highlighting
-
 "Pathogen plugin
 execute pathogen#infect()
 syntax on
@@ -16,24 +14,40 @@ hi IndentGuidesEven ctermbg=234
 " Local .vimrc: save settings when uppercase
 let g:localvimrc_persistent = 1
 
+" Set leader to space. Why not?
+let mapleader = "\<space>"
+
+" Bounce around with leader-arrow
+nnoremap <leader><up> <C-w>k
+nnoremap <leader><down> <down> <C-w>j
+nnoremap <leader><left> <left> <C-w>h
+nnoremap <leader><right> <right> <C-w>l
+
+
+set backspace=2 " Make backspace behave like a traditional editor, no special handling of indenting or line breaks
 set nocompatible
 set encoding=utf-8
-set noexpandtab
+set expandtab " Expand (or not) tabs into spaces
 set softtabstop=4
 set shiftwidth=4
-set tabstop=4
+set tabstop=4 " Width of a tab literal, in spaces
+set scrolloff=3 " Scroll window when cursor is near, not at, the top/bottom
+set showmatch " Highlight matching brackets
 
 " Search settings
-set showmatch
-set hls is ic scs " highlight search, incremental search, ignore case, smart case
+set hlsearch " Highlight search matches
+set incsearch " Show pattern matching in realtime
+set ignorecase " Default to case-insensitive search
+set smartcase " Smart case-sensitivity (become case-sensitive if search contains uppercase chars)
+" <leader><space> to remove search highlights
 noremap <leader><space> :noh<cr>
-" leader+space to clear search highlight
 
 set ruler
 set vb t_vb=
 set number
 set list
 set listchars=tab:▸\ ,eol:¬
+set noswapfile
 
 " Move by screen line not file line
 nnoremap j gj
@@ -46,6 +60,7 @@ vnoremap <F1> <ESC>
 
 set wrap
 set textwidth=79
+set colorcolumn=80
 set formatoptions=qrn1
 
 " experimenting with search options
@@ -59,3 +74,5 @@ set formatoptions=qrn1
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 
+" File type specific settings
+autocmd FileType markdown set nowrap
