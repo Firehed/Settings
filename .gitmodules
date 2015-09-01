@@ -13,3 +13,6 @@
 [submodule "vim-php-manual"]
     path = .vim/bundle/vim-php-manual
     url = git@github.com:alvan/vim-php-manual.git
+[submodule "vim-indent-guides"]
+    path = .vim/bundle/vim-indent-guides
+    url = git@github.com:nathanaelkane/vim-indent-guides.git
