@@ -4,6 +4,7 @@ syntax on
 filetype plugin indent on
 
 colorscheme default
+set background=light
 
 " Tab highlight plugin
 let g:indent_guides_enable_on_vim_startup = 1
