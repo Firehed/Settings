@@ -5,6 +5,13 @@ filetype plugin indent on
 
 colorscheme default
 set background=light
+set laststatus=2 " Allows Lightline to work properly
+let g:lightline = {
+            \ 'colorscheme': 'solarized_dark',
+            \ 'component': {
+            \   'readonly': '%{&readonly?"RO":""}',
+            \ },
+            \ }
 
 " Tab highlight plugin
 let g:indent_guides_enable_on_vim_startup = 1
