@@ -8,6 +8,9 @@ set background=light
 set laststatus=2 " Allows Lightline to work properly
 let g:lightline = {
             \ 'colorscheme': 'solarized_dark',
+            \ 'inactive': {
+            \   'left': [['readonly', 'relativepath', 'modified']]
+            \ },
             \ 'component': {
             \   'readonly': '%{&readonly?"RO":""}',
             \ },
