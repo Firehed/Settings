@@ -26,3 +26,8 @@ if [ "Darwin" == `uname` ]; then
 else
 	alias ls="ls --color"
 fi
+
+# Lots of programs like to store API tokens and such in the environment. Instead
+# of adding them to this file and risk committing them to version control, throw
+# them all in a separate file
+[[ -s "$HOME/.keys" ]] && source "$HOME/.keys"
