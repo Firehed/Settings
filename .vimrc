@@ -84,10 +84,6 @@ set formatoptions=qrn1
 " <leader>W strip trailing whitespace
 nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
-
-" File type specific settings
-autocmd FileType markdown set nowrap
-
 " Autocomplete settings
 set completeopt=longest,menuone
 
