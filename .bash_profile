@@ -2,7 +2,9 @@ export PS1="\[\e[00;32m\]\t\[\e[0m\]\[\e[00;35m\] \u\[\e[0m\]\[\e[00;37m\]@\[\e[
 
 export EDITOR=vim
 
-export PATH=$PATH:~/bin:~/.composer/vendor/bin
+export PATH=$PATH:~/bin:~/.composer/vendor/bin:~/.cargo/bin
+
+export RUST_SRC_PATH="$HOME/dev/rust/src"
 
 
 alias ..="cd .."

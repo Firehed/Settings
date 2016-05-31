@@ -87,3 +87,12 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 
 " File type specific settings
 autocmd FileType markdown set nowrap
+
+" Autocomplete settings
+set completeopt=longest,menuone
+
+" Rust autocomplete with Racer
+let g:racer_cmd = $HOME.'/.cargo/bin/racer'
+
+" Allow SuperTab to hijack the autocomplete keystrokes
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
