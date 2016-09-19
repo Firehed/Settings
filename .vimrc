@@ -30,10 +30,11 @@ let mapleader = "\<space>"
 
 " Bounce around with leader-arrow
 nnoremap <leader><up> <C-w>k
-nnoremap <leader><down> <down> <C-w>j
-nnoremap <leader><left> <left> <C-w>h
-nnoremap <leader><right> <right> <C-w>l
-
+nnoremap <leader><down> <C-w>j
+nnoremap <leader><left> <C-w>h
+nnoremap <leader><right> <C-w>l
+set splitbelow
+set splitright
 
 set backspace=2 " Make backspace behave like a traditional editor, no special handling of indenting or line breaks
 set nocompatible
