@@ -37,3 +37,6 @@
 [submodule ".vim/bundle/vim-racer"]
 	path = .vim/bundle/vim-racer
 	url = https://github.com/racer-rust/vim-racer.git
+[submodule "swift.vim"]
+    path = .vim/bundle/swift.vim
+    url = https://github.com/keith/swift.vim
