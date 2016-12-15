@@ -40,3 +40,6 @@
 [submodule "swift.vim"]
     path = .vim/bundle/swift.vim
     url = https://github.com/keith/swift.vim
+[submodule "vim-flow"]
+    path = .vim/bundle/vim-flow
+    url = git://github.com/flowtype/vim-flow.git
