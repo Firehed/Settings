@@ -33,3 +33,8 @@ fi
 # of adding them to this file and risk committing them to version control, throw
 # them all in a separate file
 [[ -s "$HOME/.keys" ]] && source "$HOME/.keys"
+
+# Chances are that when I'm using `vagrant ssh`, I want to start in /vagrant
+if [ "vagrant" == $USER ]; then
+	cd /vagrant
+fi
