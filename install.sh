@@ -1,6 +1,6 @@
 #!/bin/sh
 
-files=(.vim .vimrc .bash_profile .screenrc)
+files=(.vim .vimrc .bash_profile .screenrc .inputrc)
 
 # Trick to get absolute path to this script
 # http://stackoverflow.com/a/4774063
@@ -13,7 +13,8 @@ git submodule update
 
 popd > /dev/null
 
-echo "Run these to symlink the dotfiles"
+echo "Run these to symlink the dotfiles:"
+echo ""
 for file in ${files[@]}; do
     echo ln -s $SCRIPTPATH/$file $HOME/$file
 done
