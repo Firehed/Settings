@@ -14,6 +14,8 @@ alias .....="cd ../../../.."
 alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
 
+alias fpp="fpp -ni"
+
 alias vi="vim"
 
 alias gap="git add -p"
