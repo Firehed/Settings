@@ -43,6 +43,9 @@
 [submodule "vim-flow"]
     path = .vim/bundle/vim-flow
     url = git://github.com/flowtype/vim-flow.git
+[submodule "nerdtree"]
+    path = .vim/bundle/nerdtree
+    url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim-mustache-handlebars"]
     path = .vim/bundle/vim-mustache-handlebars
     url = git://github.com/mustache/vim-mustache-handlebars.git
