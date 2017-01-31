@@ -1,4 +1,6 @@
 --ignore-file=match:tags
+--ignore-file=ext:dat
+--ignore-file=ext:map
 --smart-case
 
 --ignore-dir=cache
@@ -6,3 +8,5 @@
 # Ignore Propel generated files (this is more liberal than I'd like...)
 --ignore-dir=om
 --ignore-dir=map
+# Skop logs
+--ignore-dir=log
