@@ -94,3 +94,6 @@ let g:racer_cmd = $HOME.'/.cargo/bin/racer'
 " Allow SuperTab to hijack the autocomplete keystrokes
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 set tags=tags;
+if version < 800
+    let g:loaded_ale = 1
+endif

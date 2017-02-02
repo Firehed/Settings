@@ -52,3 +52,6 @@
 [submodule "php.vim"]
     path = .vim/bundle/php.vim
     url = https://github.com/StanAngeloff/php.vim.git
+[submodule "ale"]
+    path = .vim/bundle/ale
+    url = https://github.com/w0rp/ale.git
