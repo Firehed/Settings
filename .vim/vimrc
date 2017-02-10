@@ -88,6 +88,12 @@ nnoremap <leader>W :%s/\s\+$//<cr>:let @/=''<CR>
 " Autocomplete settings
 set completeopt=longest,menuone
 
+" Toggle paste
+noremap <leader>p :set paste!<cr>
+
+" Q runs @q macro
+nnoremap Q @q
+
 " Rust autocomplete with Racer
 let g:racer_cmd = $HOME.'/.cargo/bin/racer'
 
