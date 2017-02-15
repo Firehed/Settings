@@ -1,12 +1,14 @@
+# Case-insensitive if the search string is all lowercase, otherwise sensitive
+--smart-case
+
+# Common files to ignore
 --ignore-file=match:tags
 --ignore-file=ext:dat
 --ignore-file=ext:map
---smart-case
 
---ignore-dir=cache
-
-# Ignore Propel generated files (this is more liberal than I'd like...)
---ignore-dir=om
---ignore-dir=map
-# Skop logs
+# Common directories to ignore
+--ignore-dir=bower_components
+--ignore-dir=node_modules
 --ignore-dir=log
+--ignore-dir=logs
+--ignore-dir=cache
