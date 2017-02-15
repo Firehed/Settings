@@ -1,6 +1,6 @@
 #!/bin/sh
 
-files=(.vim .bash_profile .bashrc .screenrc .inputrc .ackrc)
+files=(.vim .bash_profile .bashrc .screenrc .inputrc .ackrc .gitignore_global)
 
 # Trick to get absolute path to this script
 # http://stackoverflow.com/a/4774063
