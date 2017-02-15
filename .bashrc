@@ -45,3 +45,12 @@ fi
 if [ "vagrant" == $USER ]; then
 	cd /vagrant
 fi
+
+# Bash completion tools
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+if [ -d ~/.complete ]; then
+    for f in ~/.complete/*; do
+        source $f;
+    done
+fi
