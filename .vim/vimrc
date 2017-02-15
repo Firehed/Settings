@@ -103,3 +103,10 @@ set tags=tags;
 if version < 800
     let g:loaded_ale = 1
 endif
+
+" Ctrl+P Settings
+let g:ctrlp_clear_cache_on_exit = 0 " Persist cache
+let g:ctrlp_max_files = 0           " No file limit
+let g:ctrlp_custom_ignore = {
+    \ 'dir': 'node_modules\|bower_components\|\.git$',
+    \ 'file': '\.pyc$|DS_Store' }   " Keep these files and folders out of index
