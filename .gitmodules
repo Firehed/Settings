@@ -1,60 +1,60 @@
 [submodule "editorconfig-vim"]
-    path = .vim/bundle/editorconfig-vim
+	path = vim/bundle/editorconfig-vim
     url = https://github.com/editorconfig/editorconfig-vim.git
 [submodule "vim-hack"]
-    path = .vim/bundle/vim-hack
+	path = vim/bundle/vim-hack
     url = https://github.com/hhvm/vim-hack.git
 [submodule "vim-javascript"]
-    path = .vim/bundle/vim-javascript
+	path = vim/bundle/vim-javascript
     url = https://github.com/pangloss/vim-javascript.git
 [submodule "vim-jsx"]
-    path = .vim/bundle/vim-jsx
+	path = vim/bundle/vim-jsx
     url = https://github.com/mxw/vim-jsx.git
 [submodule "vim-php-manual"]
-    path = .vim/bundle/vim-php-manual
+	path = vim/bundle/vim-php-manual
     url = https://github.com/alvan/vim-php-manual.git
 [submodule "vim-indent-guides"]
-    path = .vim/bundle/vim-indent-guides
+	path = vim/bundle/vim-indent-guides
     url = https://github.com/nathanaelkane/vim-indent-guides.git
 [submodule "vim-lightline"]
-    path = .vim/bundle/vim-lightline
+	path = vim/bundle/vim-lightline
     url = https://github.com/itchyny/lightline.vim
 [submodule "vim-windowswap"]
-    path = .vim/bundle/vim-windowswap
+	path = vim/bundle/vim-windowswap
     url = https://github.com/wesQ3/vim-windowswap.git
 [submodule ".vim/bundle/Vim-Jinja2-Syntax"]
-	path = .vim/bundle/Vim-Jinja2-Syntax
+	path = vim/bundle/Vim-Jinja2-Syntax
 	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
 [submodule ".vim/bundle/rust.vim"]
-	path = .vim/bundle/rust.vim
+	path = vim/bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
 [submodule ".vim/bundle/supertab"]
-	path = .vim/bundle/supertab
+	path = vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
 [submodule ".vim/bundle/phpcomplete.vim"]
-	path = .vim/bundle/phpcomplete.vim
+	path = vim/bundle/phpcomplete.vim
 	url = git://github.com/shawncplus/phpcomplete.vim.git
 [submodule ".vim/bundle/vim-racer"]
-	path = .vim/bundle/vim-racer
+	path = vim/bundle/vim-racer
 	url = https://github.com/racer-rust/vim-racer.git
 [submodule "swift.vim"]
-    path = .vim/bundle/swift.vim
+	path = vim/bundle/swift.vim
     url = https://github.com/keith/swift.vim
 [submodule "vim-flow"]
-    path = .vim/bundle/vim-flow
+	path = vim/bundle/vim-flow
     url = git://github.com/flowtype/vim-flow.git
 [submodule "nerdtree"]
-    path = .vim/bundle/nerdtree
+	path = vim/bundle/nerdtree
     url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim-mustache-handlebars"]
-    path = .vim/bundle/vim-mustache-handlebars
+	path = vim/bundle/vim-mustache-handlebars
     url = git://github.com/mustache/vim-mustache-handlebars.git
 [submodule "php.vim"]
-    path = .vim/bundle/php.vim
+	path = vim/bundle/php.vim
     url = https://github.com/StanAngeloff/php.vim.git
 [submodule "ale"]
-    path = .vim/bundle/ale
+	path = vim/bundle/ale
     url = https://github.com/w0rp/ale.git
 [submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
+	path = vim/bundle/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
