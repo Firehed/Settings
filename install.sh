@@ -16,5 +16,5 @@ popd > /dev/null
 echo "Run these to symlink the dotfiles:"
 echo ""
 for file in ${files[@]}; do
-    echo ln -s $SCRIPTPATH/$file $HOME/.$file
+    echo ln -Fs $SCRIPTPATH/$file $HOME/.$file
 done
