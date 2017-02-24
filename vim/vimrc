@@ -108,6 +108,9 @@ if version < 800
     let g:loaded_ale = 1
 endif
 
+" :w!! to write with sudo
+cmap w!! w !sudo tee > /dev/null %
+
 " Ctrl+P Settings
 let g:ctrlp_clear_cache_on_exit = 0 " Persist cache
 let g:ctrlp_max_files = 0           " No file limit
