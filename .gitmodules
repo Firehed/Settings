@@ -1,9 +1,6 @@
 [submodule "editorconfig-vim"]
 	path = vim/bundle/editorconfig-vim
     url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule "vim-hack"]
-	path = vim/bundle/vim-hack
-    url = https://github.com/hhvm/vim-hack.git
 [submodule "vim-javascript"]
 	path = vim/bundle/vim-javascript
     url = https://github.com/pangloss/vim-javascript.git
