@@ -91,10 +91,6 @@ set completeopt=longest,menuone
 " Toggle paste
 noremap <leader>p :set paste!<cr>
 
-" Delete deprecated windowswap commands
-silent! unmap <leader>yw
-silent! unmap <leader>pw
-
 " Q runs @q macro
 nnoremap Q @q
 
