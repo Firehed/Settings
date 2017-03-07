@@ -19,19 +19,19 @@
 [submodule "vim-windowswap"]
 	path = vim/bundle/vim-windowswap
     url = https://github.com/wesQ3/vim-windowswap.git
-[submodule ".vim/bundle/Vim-Jinja2-Syntax"]
+[submodule "Vim-Jinja2-Syntax"]
 	path = vim/bundle/Vim-Jinja2-Syntax
 	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
-[submodule ".vim/bundle/rust.vim"]
+[submodule "rust.vim"]
 	path = vim/bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
-[submodule ".vim/bundle/supertab"]
+[submodule "supertab"]
 	path = vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule ".vim/bundle/phpcomplete.vim"]
+[submodule "phpcomplete.vim"]
 	path = vim/bundle/phpcomplete.vim
 	url = git://github.com/shawncplus/phpcomplete.vim.git
-[submodule ".vim/bundle/vim-racer"]
+[submodule "vim-racer"]
 	path = vim/bundle/vim-racer
 	url = https://github.com/racer-rust/vim-racer.git
 [submodule "swift.vim"]
@@ -52,6 +52,6 @@
 [submodule "ale"]
 	path = vim/bundle/ale
     url = https://github.com/w0rp/ale.git
-[submodule ".vim/bundle/ctrlp.vim"]
+[submodule "ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
