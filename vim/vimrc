@@ -11,8 +11,14 @@ let g:lightline = {
             \ 'inactive': {
             \   'left': [['readonly', 'relativepath', 'modified']]
             \ },
+            \ 'active': {
+            \   'left': [ [ 'mode', 'paste' ],
+            \             [ 'readonly', 'filename', 'modified', 'alestatus' ]
+            \           ],
+            \ },
             \ 'component': {
             \   'readonly': '%{&readonly?"RO":""}',
+            \   'alestatus': '%{ALEGetStatusLine()}',
             \ },
             \ }
 
@@ -99,10 +105,16 @@ let g:racer_cmd = $HOME.'/.cargo/bin/racer'
 
 " Allow SuperTab to hijack the autocomplete keystrokes
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+
 set tags=tags;
+
+" ALE settings
 if version < 800
+    " Disable for older Vim versions
     let g:loaded_ale = 1
 endif
+let g:ale_lint_delay = 500 " milliseconds
+let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '✓ ok']
 
 " :w!! to write with sudo
 cmap w!! w !sudo tee > /dev/null %
