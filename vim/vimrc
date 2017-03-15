@@ -42,22 +42,22 @@ nnoremap <leader><right> <C-w>l
 set splitbelow
 set splitright
 
-set backspace=2 " Make backspace behave like a traditional editor, no special handling of indenting or line breaks
-set nocompatible
-set encoding=utf-8
-set expandtab " Expand (or not) tabs into spaces
+set nocompatible     " No legacy
+set backspace=2      " Make backspace behave like a traditional editor, no special handling of indenting or line breaks
+set encoding=utf-8   " Charset
+set expandtab        " Expand (or not) tabs into spaces
 set softtabstop=4
 set shiftwidth=4
-set tabstop=4 " Width of a tab literal, in spaces
-set scrolloff=3 " Scroll window when cursor is near, not at, the top/bottom
-set showmatch " Highlight matching brackets
+set tabstop=4        " Width of a tab literal, in spaces
+set scrolloff=3      " Scroll window when cursor is near, not at, the top/bottom
+set showmatch        " Highlight matching brackets
 
 " Search settings
-set hlsearch " Highlight search matches
-set incsearch " Show pattern matching in realtime
-set ignorecase " Default to case-insensitive search
-set smartcase " Smart case-sensitivity (become case-sensitive if search contains uppercase chars)
-" <leader><space> to remove search highlights
+set hlsearch         " Highlight search matches
+set incsearch        " Show pattern matching in realtime
+set ignorecase       " Default to case-insensitive search
+set smartcase        " Smart case-sensitivity (become case-sensitive if search contains uppercase chars)
+" Remove search highlighting
 noremap <leader><space> :noh<cr>
 
 set ruler
@@ -115,6 +115,7 @@ if version < 800
 endif
 let g:ale_lint_delay = 500 " milliseconds
 let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '✓ ok']
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 " :w!! to write with sudo
 cmap w!! w !sudo tee > /dev/null %
