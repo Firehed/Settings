@@ -28,6 +28,9 @@ alias gs="git status"
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias gpr="git pull --rebase"
+alias cf="git diff --name-only master"
+
+alias rg="rg -S"
 
 # OS X uses different syntax for some commands :/
 if [ "Darwin" == `uname` ]; then
