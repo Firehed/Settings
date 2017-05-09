@@ -121,16 +121,19 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 cmap w!! w !sudo tee > /dev/null %
 
 " Ctrl+P Settings
-let g:ctrlp_clear_cache_on_exit = 0 " Persist cache
-let g:ctrlp_max_files = 0           " No file limit
+let g:ctrlp_use_caching = 0 " No cache
+let g:ctrlp_max_files = 0   " No file limit
 let g:ctrlp_custom_ignore = {
     \ 'dir': 'node_modules\|bower_components\|\.git$',
     \ 'file': '\.pyc$|DS_Store' }   " Keep these files and folders out of index
 
 nnoremap <leader>a :Ack!<space>
 
-" Prefer `ag` over `ack` when available
-if executable('ag')
+" Prefer `rg` over `ag` over `ack` when available
+if executable('rg')
+    let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+    let g:ackprg = 'rg -S --vimgrep'
+elseif executable('ag')
     " Search with `ag` if it is installed
     let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
     let g:ackprg = 'ag --vimgrep'
