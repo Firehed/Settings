@@ -2,7 +2,7 @@ parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-export PS1="\[\e[32m\]\t\[\e[m\] \[\e[35m\]\u\[\e[m\]@\[\e[36m\]\h\[\e[m\] \[\e[33m\]\w\[\e[m\]\[\e[31m\]\`parse_git_branch\`\[\e[m\] \[\e[34m\][\$?]\[\e[m\]\[\e[37m\]\$\[\e[m\] "
+export PS1="\n\[\e[32m\]\t\[\e[m\] \[\e[35m\]\u\[\e[m\]@\[\e[36m\]\h\[\e[m\] \[\e[33m\]\w\[\e[m\]\[\e[31m\]\`parse_git_branch\`\[\e[m\] \[\e[34m\][\$?]\[\e[m\]\[\e[37m\]\$\[\e[m\] "
 
 export EDITOR=vim
 
