@@ -3,11 +3,11 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 
-colorscheme default
-set background=light
+colorscheme solarized
+set background=dark
 set laststatus=2 " Allows Lightline to work properly
 let g:lightline = {
-            \ 'colorscheme': 'solarized_dark',
+            \ 'colorscheme': 'solarized',
             \ 'inactive': {
             \   'left': [['readonly', 'relativepath', 'modified']]
             \ },
@@ -25,9 +25,11 @@ let g:lightline = {
 " Tab highlight plugin
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors=0
-hi IndentGuidesOdd ctermbg=233
-hi IndentGuidesEven ctermbg=234
-
+"hi IndentGuidesOdd ctermbg=233
+"hi IndentGuidesEven ctermbg=234
+hi IndentGuidesOdd  ctermbg=0
+hi IndentGuidesEven ctermbg=10
+hi LineNr ctermbg=8 ctermfg=10
 " Local .vimrc: save settings when uppercase
 let g:localvimrc_persistent = 1
 
