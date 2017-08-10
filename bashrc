@@ -1,8 +1,31 @@
 parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
 }
 
-export PS1="\n\[\e[32m\]\t\[\e[m\] \[\e[35m\]\u\[\e[m\]@\[\e[36m\]\h\[\e[m\] \[\e[33m\]\w\[\e[m\]\[\e[31m\]\`parse_git_branch\`\[\e[m\] \[\e[34m\][\$?]\[\e[m\]\[\e[37m\]\$\[\e[m\] "
+# Colors
+RESET='\[\e[0m\]'
+BLACK='\[\e[0;30m\]'
+RED='\[\e[0;31m\]'
+GREEN='\[\e[0;32m\]'
+YELLOW='\[\e[0;33m\]'
+BLUE='\[\e[0;34m\]'
+MAGENTA='\[\e[0;35m\]'
+CYAN='\[\e[0;36m\]'
+WHITE='\[\e[0;37m\]'
+
+PROMPT_COMMAND=__prompt_command
+__prompt_command() {
+    # Capture exit code before git branch to avoid overwrite
+    local EXIT=$?
+    PS1="\n"
+    PS1+="$GREEN\t " # Timestamp
+    PS1+="$MAGENTA\u$RESET@$CYAN\h " # user@host
+    PS1+="$YELLOW\w " # CWD from ~
+    PS1+="$RED`parse_git_branch`"
+    PS1+="$BLUE[$EXIT] "
+    PS1+="$WHITE\\\$ " # $ for user, # for root
+    PS1+="$RESET"
+}
 
 export EDITOR=vim
 
