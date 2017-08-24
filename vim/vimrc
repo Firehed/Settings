@@ -7,20 +7,33 @@ colorscheme solarized
 set background=dark
 set laststatus=2 " Allows Lightline to work properly
 let g:lightline = {
-            \ 'colorscheme': 'solarized',
-            \ 'inactive': {
-            \   'left': [['readonly', 'relativepath', 'modified']]
-            \ },
-            \ 'active': {
-            \   'left': [ [ 'mode', 'paste' ],
-            \             [ 'readonly', 'filename', 'modified', 'alestatus' ]
-            \           ],
-            \ },
-            \ 'component': {
-            \   'readonly': '%{&readonly?"RO":""}',
-            \   'alestatus': '%{ALEGetStatusLine()}',
-            \ },
-            \ }
+    \ 'colorscheme': 'solarized',
+    \ 'inactive': {
+    \   'left': [['readonly', 'relativepath', 'modified']]
+    \ },
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'readonly', 'filename', 'modified', 'alestatus' ]
+    \           ],
+    \ },
+    \ 'component': {
+    \   'readonly': '%{&readonly?"RO":""}',
+    \   'alestatus': '%{LinterStatus()}',
+    \ },
+    \ }
+
+function! LinterStatus() abort
+    let l:counts = ale#statusline#Count(bufnr(''))
+
+    let l:all_errors = l:counts.error + l:counts.style_error
+    let l:all_non_errors = l:counts.total - l:all_errors
+    if l:counts.total == 0
+        " e2 9c 93
+        return '✓ ok'
+    endif
+    " e2 a8 89, e2 9a a0
+    return printf('⨉ %d ⚠ %d', l:all_errors, l:all_non_errors)
+endfunction
 
 " Tab highlight plugin
 let g:indent_guides_enable_on_vim_startup = 1
@@ -116,7 +129,6 @@ if version < 800
     let g:loaded_ale = 1
 endif
 let g:ale_lint_delay = 500 " milliseconds
-let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '✓ ok']
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 " Run only the following linters for the specified languages
