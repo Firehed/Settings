@@ -47,7 +47,7 @@ hi LineNr ctermbg=8 ctermfg=10
 let g:localvimrc_persistent = 1
 
 " Set leader to space. Why not?
-let mapleader = "\<space>"
+let g:mapleader = "\<space>"
 
 " Bounce around with leader-arrow
 nnoremap <leader><up> <C-w>k
@@ -57,9 +57,9 @@ nnoremap <leader><right> <C-w>l
 set splitbelow
 set splitright
 
-set nocompatible     " No legacy
 set backspace=2      " Make backspace behave like a traditional editor, no special handling of indenting or line breaks
 set encoding=utf-8   " Charset
+scriptencoding utf8
 set expandtab        " Expand (or not) tabs into spaces
 set softtabstop=4
 set shiftwidth=4
@@ -76,7 +76,7 @@ set smartcase        " Smart case-sensitivity (become case-sensitive if search c
 noremap <leader><space> :noh<cr>
 
 set ruler
-set vb t_vb=
+set visualbell t_vb=
 set number
 set list
 set listchars=tab:▸\ ,eol:¬
@@ -119,12 +119,12 @@ nnoremap Q @q
 let g:racer_cmd = $HOME.'/.cargo/bin/racer'
 
 " Allow SuperTab to hijack the autocomplete keystrokes
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 
 set tags=tags;
 
 " ALE settings
-if version < 800
+if v:version < 800
     " Disable for older Vim versions
     let g:loaded_ale = 1
 endif
