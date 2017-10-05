@@ -7,20 +7,33 @@ colorscheme solarized
 set background=dark
 set laststatus=2 " Allows Lightline to work properly
 let g:lightline = {
-            \ 'colorscheme': 'solarized',
-            \ 'inactive': {
-            \   'left': [['readonly', 'relativepath', 'modified']]
-            \ },
-            \ 'active': {
-            \   'left': [ [ 'mode', 'paste' ],
-            \             [ 'readonly', 'filename', 'modified', 'alestatus' ]
-            \           ],
-            \ },
-            \ 'component': {
-            \   'readonly': '%{&readonly?"RO":""}',
-            \   'alestatus': '%{ALEGetStatusLine()}',
-            \ },
-            \ }
+    \ 'colorscheme': 'solarized',
+    \ 'inactive': {
+    \   'left': [['readonly', 'relativepath', 'modified']]
+    \ },
+    \ 'active': {
+    \   'left': [ [ 'mode', 'paste' ],
+    \             [ 'readonly', 'filename', 'modified', 'alestatus' ]
+    \           ],
+    \ },
+    \ 'component': {
+    \   'readonly': '%{&readonly?"RO":""}',
+    \   'alestatus': '%{LinterStatus()}',
+    \ },
+    \ }
+
+function! LinterStatus() abort
+    let l:counts = ale#statusline#Count(bufnr(''))
+
+    let l:all_errors = l:counts.error + l:counts.style_error
+    let l:all_non_errors = l:counts.total - l:all_errors
+    if l:counts.total == 0
+        " e2 9c 93
+        return '✓ ok'
+    endif
+    " e2 a8 89, e2 9a a0
+    return printf('⨉ %d ⚠ %d', l:all_errors, l:all_non_errors)
+endfunction
 
 " Tab highlight plugin
 let g:indent_guides_enable_on_vim_startup = 1
@@ -34,7 +47,7 @@ hi LineNr ctermbg=8 ctermfg=10
 let g:localvimrc_persistent = 1
 
 " Set leader to space. Why not?
-let mapleader = "\<space>"
+let g:mapleader = "\<space>"
 
 " Bounce around with leader-arrow
 nnoremap <leader><up> <C-w>k
@@ -44,15 +57,16 @@ nnoremap <leader><right> <C-w>l
 set splitbelow
 set splitright
 
-set nocompatible     " No legacy
 set backspace=2      " Make backspace behave like a traditional editor, no special handling of indenting or line breaks
 set encoding=utf-8   " Charset
+scriptencoding utf8
 set expandtab        " Expand (or not) tabs into spaces
 set softtabstop=4
 set shiftwidth=4
 set tabstop=4        " Width of a tab literal, in spaces
 set scrolloff=3      " Scroll window when cursor is near, not at, the top/bottom
 set showmatch        " Highlight matching brackets
+set noshowmode       " Don't show mode in status line, it's handled by lightline
 
 " Search settings
 set hlsearch         " Highlight search matches
@@ -63,7 +77,7 @@ set smartcase        " Smart case-sensitivity (become case-sensitive if search c
 noremap <leader><space> :noh<cr>
 
 set ruler
-set vb t_vb=
+set visualbell t_vb=
 set number
 set list
 set listchars=tab:▸\ ,eol:¬
@@ -106,17 +120,16 @@ nnoremap Q @q
 let g:racer_cmd = $HOME.'/.cargo/bin/racer'
 
 " Allow SuperTab to hijack the autocomplete keystrokes
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 
 set tags=tags;
 
 " ALE settings
-if version < 800
+if v:version < 800
     " Disable for older Vim versions
     let g:loaded_ale = 1
 endif
 let g:ale_lint_delay = 500 " milliseconds
-let g:ale_statusline_format = ['⨉ %d', '⚠ %d', '✓ ok']
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 
 " Run only the following linters for the specified languages
