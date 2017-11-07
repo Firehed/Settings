@@ -135,6 +135,7 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 " Run only the following linters for the specified languages
 let g:ale_linters = {
     \ 'html': [],
+    \ 'typescript': ['tsserver'],
 \ }
 
 " :w!! to write with sudo
