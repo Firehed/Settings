@@ -75,6 +75,8 @@ set ignorecase       " Default to case-insensitive search
 set smartcase        " Smart case-sensitivity (become case-sensitive if search contains uppercase chars)
 " Remove search highlighting
 noremap <leader><space> :noh<cr>
+" Open NERDTree to current file
+nnoremap <leader>o :NERDTreeFind<cr>
 
 set ruler
 set visualbell t_vb=
