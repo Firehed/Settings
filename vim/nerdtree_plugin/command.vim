@@ -10,6 +10,7 @@ function! NERDTreeOSCommandIsActive()
 endfunction
 
 function! NERDTreeOSCommand()
+    let cwd = getcwd()
     let node = g:NERDTreeFileNode.GetSelected()
     let command = input('Command: ')
     silent call node.path.changeToDir()
@@ -17,5 +18,6 @@ function! NERDTreeOSCommand()
     call node.refresh()
     call b:NERDTree.render()
     redraw
+    execute "cd " . cwd
 endfunction
 
