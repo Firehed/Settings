@@ -122,9 +122,17 @@ nnoremap Q @q
 let g:racer_cmd = $HOME.'/.cargo/bin/racer'
 
 " Allow SuperTab to hijack the autocomplete keystrokes
-let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
+" let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 
-set tags=tags;
+" set tags=tags;
+" Definition jump
+nnoremap <C-]> :ALEGoToDefinition<CR>
+nnoremap <C-}> :ALEGoToDefinitionInVSplit<CR>
+" future: C-t for go back
+" Go to next/prev errors
+nnoremap <C-j> :ALENextWrap<CR>
+nnoremap <C-k> :ALEPreviousWrap<CR>
+let g:ale_completion_enabled = 1
 
 " ALE settings
 if v:version < 800
