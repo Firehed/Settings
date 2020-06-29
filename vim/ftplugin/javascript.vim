@@ -3,5 +3,3 @@ setlocal shiftwidth=2
 setlocal expandtab
 setlocal autoindent
 setlocal smarttab
-
-let g:javascript_plugin_flow = 1
