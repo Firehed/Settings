@@ -1,12 +1,6 @@
 [submodule "editorconfig-vim"]
 	path = vim/bundle/editorconfig-vim
     url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule "vim-javascript"]
-	path = vim/bundle/vim-javascript
-    url = https://github.com/pangloss/vim-javascript.git
-[submodule "vim-jsx"]
-	path = vim/bundle/vim-jsx
-    url = https://github.com/mxw/vim-jsx.git
 [submodule "vim-php-manual"]
 	path = vim/bundle/vim-php-manual
     url = https://github.com/alvan/vim-php-manual.git
@@ -19,9 +13,6 @@
 [submodule "vim-windowswap"]
 	path = vim/bundle/vim-windowswap
     url = https://github.com/wesQ3/vim-windowswap.git
-[submodule "Vim-Jinja2-Syntax"]
-	path = vim/bundle/Vim-Jinja2-Syntax
-	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
 [submodule "supertab"]
 	path = vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
