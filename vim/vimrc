@@ -119,16 +119,16 @@ noremap <leader>p :set paste!<cr>
 nnoremap Q @q
 
 " Rust autocomplete with Racer
-let g:racer_cmd = $HOME.'/.cargo/bin/racer'
+" let g:racer_cmd = $HOME.'/.cargo/bin/racer'
 
 " Allow SuperTab to hijack the autocomplete keystrokes
 " let g:SuperTabDefaultCompletionType = '<c-x><c-o>'
 
 " set tags=tags;
 " Definition jump
+" NOTE: C-o is the default "go back" for this
 nnoremap <C-]> :ALEGoToDefinition<CR>
-nnoremap <C-}> :ALEGoToDefinitionInVSplit<CR>
-" future: C-t for go back
+nnoremap <C-}> :ALEGoToDefinition -vsplit<CR>
 " Go to next/prev errors
 nnoremap <C-j> :ALENextWrap<CR>
 nnoremap <C-k> :ALEPreviousWrap<CR>
