@@ -1,7 +1,14 @@
 "Pathogen plugin
 execute pathogen#infect()
 syntax on
+" see :help filetype-overview
 filetype plugin indent on
+
+" Debug loggging (for tracing LSP integrations, etc)
+" call ch_logfile(expand('~/vim.log'), 'w')
+
+" See https://learnvimscriptthehardway.stevelosh.com/chapters/42.html for
+" additional information on directory structure.
 
 colorscheme solarized
 set background=dark
