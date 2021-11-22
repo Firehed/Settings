@@ -45,13 +45,30 @@ alias fpp="fpp -ni"
 
 alias vi="vim"
 
+repoUsesMain() {
+    git show-ref --verify --quiet refs/heads/main
+}
+
 alias gap="git add -p"
-alias gcm="git checkout master"
+# alias gcm="git checkout master"
+alias gca="git commit --amend"
+alias gcm="git-switch 0"
 alias gs="git status"
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias gpr="git pull --rebase"
-alias cf="git diff --name-only master"
+# "Changed files"
+cf() {
+    local branch=""
+    if $(repoUsesMain); then
+        branch="main"
+    else
+        branch="master"
+    fi
+    # echo ${repoUsesMain()}
+    # echo $branch
+    git diff --name-only $branch
+}
 
 alias rg="rg -S"
 
