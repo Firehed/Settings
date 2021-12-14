@@ -140,15 +140,18 @@ nnoremap <C-}> :ALEGoToDefinition -vsplit<CR>
 " Go to next/prev errors
 nnoremap <C-j> :ALENextWrap<CR>
 nnoremap <C-k> :ALEPreviousWrap<CR>
-let g:ale_completion_enabled = 1
 
 " ALE settings
 if v:version < 800
     " Disable for older Vim versions
     let g:loaded_ale = 1
 endif
+let g:ale_completion_enabled = 1
 let g:ale_lint_delay = 500 " milliseconds
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" let g:ale_sign_column_always = 1 " Keep sidebar open at all times
+
+set omnifunc=ale#completion#OmniFunc
 
 " Run only the following linters for the specified languages
 let g:ale_linters = {
