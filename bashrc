@@ -89,6 +89,8 @@ if [ "vagrant" == $USER ]; then
 	cd /vagrant
 fi
 
+alias g="cd ~/dev/github"
+
 # Bash completion tools
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
