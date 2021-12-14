@@ -74,6 +74,7 @@ set tabstop=4        " Width of a tab literal, in spaces
 set scrolloff=3      " Scroll window when cursor is near, not at, the top/bottom
 set showmatch        " Highlight matching brackets
 set noshowmode       " Don't show mode in status line, it's handled by lightline
+set noautoread       " Do not automatically reload files if changed externally
 
 " Search settings
 set hlsearch         " Highlight search matches
