@@ -1,4 +1,5 @@
-"Pathogen plugin
+let g:pathogen_blacklist = ['editorconfig-vim']
+" Pathogen plugin
 execute pathogen#infect()
 syntax on
 " see :help filetype-overview
