@@ -1,0 +1,11 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+# Email intentionally excluded; I use different emails per project/directory
+# (e.g. for work)
+	name = Eric Stern
+[core]
+	excludesFile = ~/.gitignore
