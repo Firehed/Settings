@@ -31,6 +31,8 @@ export EDITOR=vim
 
 export PATH=$PATH:~/bin:~/.composer/vendor/bin:~/.cargo/bin
 
+export RIPGREP_CONFIG_PATH=$HOME/.ripgreprc
+
 export RUST_SRC_PATH="$HOME/dev/rust/src"
 
 
