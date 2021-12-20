@@ -9,3 +9,5 @@
 	name = Eric Stern
 [core]
 	excludesFile = ~/.gitignore
+[push]
+	default = current
