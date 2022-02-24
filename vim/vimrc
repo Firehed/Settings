@@ -160,9 +160,10 @@ set omnifunc=ale#completion#OmniFunc
 let g:ale_fixers = {
     \ '*': ['remove_trailing_lines'],
 \ }
+" Disabling php: cspell, intelepense, langserver, phan, phpactor, phpmd, psalm, tlint
 let g:ale_linters = {
     \ 'html': [],
-    \ 'php': ['langserver', 'php', 'phpcs', 'phpstan'],
+    \ 'php': ['php', 'phpcs', 'phpstan'],
     \ 'typescript': ['tsserver'],
 \ }
 let g:ale_php_phpstan_executable="vendor/bin/phpstan"
