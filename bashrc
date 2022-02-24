@@ -51,6 +51,8 @@ repoUsesMain() {
     git show-ref --verify --quiet refs/heads/main
 }
 
+alias diff="diff -u" # Use git-style formatting
+
 alias gap="git add -p"
 # alias gcm="git checkout master"
 alias gca="git commit --amend"
