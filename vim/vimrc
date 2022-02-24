@@ -163,11 +163,7 @@ let g:ale_fixers = {
 " Disabling php: cspell, intelepense, langserver, phan, phpactor, phpmd, psalm, tlint
 let g:ale_linters = {
     \ 'html': [],
-    \ 'php': ['php', 'phpcs', 'phpstan'],
-    \ 'typescript': ['tsserver'],
 \ }
-let g:ale_php_phpstan_executable="vendor/bin/phpstan"
-let g:ale_php_langserver_executable="vendor/bin/psalm-language-server"
 
 " :w!! to write with sudo
 cmap w!! w !sudo tee > /dev/null %
