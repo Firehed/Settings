@@ -5,6 +5,12 @@ syntax on
 " see :help filetype-overview
 filetype plugin indent on
 
+" Press F10 to identify syntax highlighting info (for writing/maintaining
+" syntax plugins)
+nnoremap <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
 " Debug loggging (for tracing LSP integrations, etc)
 " call ch_logfile(expand('~/vim.log'), 'w')
 
