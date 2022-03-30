@@ -6,3 +6,4 @@
 --glob=!yarn.lock
 --glob=!composer.lock
 --glob=!*.js.map
+--glob=!phpstan-baseline.neon
