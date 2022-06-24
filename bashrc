@@ -1,6 +1,7 @@
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
-}
+REALPATH_TO_SELF=$(readlink "$BASH_SOURCE")
+REALPATH_TO_SRC_DIR=$(dirname "$REALPATH_TO_SELF")
+
+source $REALPATH_TO_SRC_DIR/git-prompt.sh
 
 # Colors
 RESET='\[\e[0m\]'
@@ -21,7 +22,7 @@ __prompt_command() {
     PS1+="$GREEN\t " # Timestamp
     PS1+="$MAGENTA\u$RESET@$CYAN\h " # user@host
     PS1+="$YELLOW\w " # CWD from ~
-    PS1+="$RED`parse_git_branch`"
+    PS1+="$RED`__git_ps1 '(%s) '`"
     PS1+="$BLUE[$EXIT] "
     PS1+="$WHITE\\\$ " # $ for user, # for root
     PS1+="$RESET"
