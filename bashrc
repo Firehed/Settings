@@ -77,8 +77,6 @@ cf() {
     git diff --name-only $branch
 }
 
-alias rg="rg -S"
-
 # OS X uses different syntax for some commands :/
 if [ "Darwin" == `uname` ]; then
 	alias ls="ls -G"
