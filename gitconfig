@@ -7,6 +7,7 @@
 # Email intentionally excluded; I use different emails per project/directory
 # (e.g. for work)
 	name = Eric Stern
+	email = eric@ericstern.com
 [core]
 	excludesFile = ~/.gitignore
 [push]
