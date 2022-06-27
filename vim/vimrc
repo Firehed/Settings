@@ -84,6 +84,8 @@ set noshowmode       " Don't show mode in status line, it's handled by lightline
 set noautoread       " Do not automatically reload files if changed externally
 " https://vi.stackexchange.com/questions/25086/vim-hangs-when-i-open-a-typescript-file
 set regexpengine=0   " Automatic engine selection (default 1=old can be very slow for react-ts)
+" macOS disables modelines by default for security reasons. Newer Vim should be ok..?
+set modelines=5
 
 " Search settings
 set hlsearch         " Highlight search matches
@@ -166,7 +168,6 @@ set omnifunc=ale#completion#OmniFunc
 let g:ale_fixers = {
     \ '*': ['remove_trailing_lines'],
 \ }
-" Disabling php: cspell, intelepense, langserver, phan, phpactor, phpmd, psalm, tlint
 let g:ale_linters = {
     \ 'html': [],
 \ }
