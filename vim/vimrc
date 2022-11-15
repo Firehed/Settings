@@ -96,6 +96,8 @@ set smartcase        " Smart case-sensitivity (become case-sensitive if search c
 noremap <leader><space> :noh<cr>
 " Open NERDTree to current file
 nnoremap <leader>o :NERDTreeFind<cr>
+" Fix goofy bug where cmd window takes up a ton of space
+nnoremap <leader>! :set cmdheight=0<cr>:set cmdheight=1<cr>
 
 set ruler
 set visualbell t_vb=
