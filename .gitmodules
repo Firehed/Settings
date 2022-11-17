@@ -21,7 +21,7 @@
     url = https://github.com/scrooloose/nerdtree.git
 [submodule "vim-mustache-handlebars"]
 	path = vim/bundle/vim-mustache-handlebars
-    url = git://github.com/mustache/vim-mustache-handlebars.git
+    url = https://github.com/mustache/vim-mustache-handlebars.git
 [submodule "ale"]
 	path = vim/bundle/ale
     url = https://github.com/w0rp/ale.git
@@ -45,7 +45,7 @@
 	url = https://github.com/sheerun/vim-polyglot
 [submodule "vim/bundle/vim-commentary"]
 	path = vim/bundle/vim-commentary
-	url = git://github.com/tpope/vim-commentary.git
+	url = https://github.com/tpope/vim-commentary.git
 [submodule "vim/bundle/vim-active-numbers"]
 	path = vim/bundle/vim-active-numbers
 	url = https://github.com/auwsmit/vim-active-numbers.git
