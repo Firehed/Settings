@@ -31,6 +31,9 @@ __prompt_command() {
 export EDITOR=vim
 
 export HOMEBREW_NO_AUTO_UPGRADE=1
+export HOMEBREW_NO_ANALYTICS=1
+# Set PATH, MANPATH, etc., for Homebrew.
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 export PATH=$PATH:~/bin:~/.composer/vendor/bin:~/.cargo/bin
 
