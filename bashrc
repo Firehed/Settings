@@ -30,10 +30,14 @@ __prompt_command() {
 
 export EDITOR=vim
 
+# Homebrew
 export HOMEBREW_NO_AUTO_UPGRADE=1
 export HOMEBREW_NO_ANALYTICS=1
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Composer
+export COMPOSER_IGNORE_PLATFORM_REQS=1
 
 export PATH=$PATH:~/bin:~/.composer/vendor/bin:~/.cargo/bin
 
@@ -56,6 +60,7 @@ alias vi="vim"
 
 alias diff="diff -u" # Use git-style formatting
 
+alias g="cd ~/dev/github"
 alias gap="git add -p"
 # alias gcm="git checkout master"
 alias gca="git commit --amend"
@@ -77,8 +82,6 @@ fi
 # of adding them to this file and risk committing them to version control, throw
 # them all in a separate file
 [[ -s "$HOME/.keys" ]] && source "$HOME/.keys"
-
-alias g="cd ~/dev/github"
 
 # Bash completion tools
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
