@@ -7,6 +7,16 @@ echo "Disable automatic capitalization"
 defaults write -g NSAutomaticCapitalizationEnabled -bool false
 echo "Disable two spaces to period"
 defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
+echo "Adding arrow key tab mappings"
+defaults write -g NSUserKeyEquivalents -dict \
+    "Select Next Tab" "@~\\U2192" \
+    "Select Previous Tab" "@~\\U2190" \
+    "Show Next Tab" "@~\\U2192" \
+    "Show Previous Tab" "@~\\U2190"
+
+
+echo "Configuring Safari"
+defaults write com.apple.safari IncludeDevelopMenu -bool true
 
 echo "Configuring iTerm2"
 defaults write com.googlecode.iterm2 PrefsCustomFolder $HOME/dev/github/firehed/settings/iterm
