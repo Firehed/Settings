@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 echo "Step 3 - Configuring"
 
+echo "Closing System Settings"
+killall "System Settings"
+
 echo "Disable autocorrect"
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
 echo "Disable automatic capitalization"
@@ -21,3 +24,7 @@ defaults write com.apple.safari IncludeDevelopMenu -bool true
 echo "Configuring iTerm2"
 defaults write com.googlecode.iterm2 PrefsCustomFolder $HOME/dev/github/firehed/settings/iterm
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+
+echo "Restarting applications"
+killall Finder
+killall Dock
