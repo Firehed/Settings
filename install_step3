@@ -19,7 +19,21 @@ defaults write -g NSUserKeyEquivalents -dict-add "Show Previous Tab" "@~\\U2190"
 
 
 echo "Configuring Safari"
-defaults write com.apple.safari IncludeDevelopMenu -bool true
+defaults write -app Safari AlwaysRestoreSessionAtLaunch -bool true
+defaults write -app Safari ExcludePrivateWindowWhenRestoringSessionAtLaunch -bool true
+defaults write -app Safari FindOnPageMatchesWordStartsOnly -bool false
+defaults write -app Safari OpenPrivateWindowWhenNotRestoringSessionAtLaunch -bool false
+defaults write -app Safari ShowFullURLInSmartSearchField -bool true
+defaults write -app Safari ShowOverlayStatusBar -bool true
+echo "  Dev Tools"
+# These do not appear to work, despite diffing the plist
+# defaults write -app Safari IncludeDevelopMenu -bool true
+# defaults write -app Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+# defaults write -app Safari WebKitPreferences.developerExtrasEnabled -bool true
+echo "    Develop menu needs manual configuration, it won't work here"
+# Leave this off - debug is for developrs OF Safari
+# defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
 
 echo "Configuring iTerm2"
 defaults write com.googlecode.iterm2 PrefsCustomFolder $HOME/dev/github/firehed/settings/iterm
