@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+set -e
+set -o pipefail
+
+./install_step1
+./install_step2
+./install_step3

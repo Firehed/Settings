@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+echo "Step 3 - Configuring"
+
+echo "Disable autocorrect"
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+echo "Disable automatic capitalization"
+defaults write -g NSAutomaticCapitalizationEnabled -bool false
+echo "Disable two spaces to period"
+defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false

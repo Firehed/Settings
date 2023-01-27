@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+echo "Installing Homebrew utilities"
+# validate brew is installed
+
+echo "Installing Homebrew casks"
+# install a bunch of homebrew components
+brew install \
+    composer \
+    gh \
+    gpg \
+    jq \
+    kubectl \
+    kustomize \
+    npm \
+    php \
+    ripgrep \
+    tree
+
+brew install --cask \
+    docker \
+    iterm2 \
+    rectangle \
+    sequel-ace \
+    linearmouse
