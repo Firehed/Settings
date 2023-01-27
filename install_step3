@@ -29,6 +29,9 @@ defaults write -app Safari FindOnPageMatchesWordStartsOnly -bool false
 defaults write -app Safari OpenPrivateWindowWhenNotRestoringSessionAtLaunch -bool false
 defaults write -app Safari ShowFullURLInSmartSearchField -bool true
 defaults write -app Safari ShowOverlayStatusBar -bool true
+echo "  Make tab key useful"
+defaults write -app Safari WebKitPreferences.tabFocusesLinks -bool true
+defaults write -app Safari WebKitTabToLinksPreferenceKey -bool true
 echo "  Dev Tools"
 # These do not appear to work, despite diffing the plist
 # defaults write -app Safari IncludeDevelopMenu -bool true
