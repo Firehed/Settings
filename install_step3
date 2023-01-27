@@ -7,3 +7,7 @@ echo "Disable automatic capitalization"
 defaults write -g NSAutomaticCapitalizationEnabled -bool false
 echo "Disable two spaces to period"
 defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
+
+echo "Configuring iTerm2"
+defaults write com.googlecode.iterm2 PrefsCustomFolder $HOME/dev/github/firehed/settings/iterm
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
