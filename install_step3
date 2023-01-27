@@ -18,6 +18,8 @@ defaults write -g NSUserKeyEquivalents -dict-add "Show Next Tab" "@~\\U2192"
 defaults write -g NSUserKeyEquivalents -dict-add "Show Previous Tab" "@~\\U2190"
 echo "  Don't show slow thumbnail when taking screenshots"
 defaults write com.apple.screencapture show-thumbnail -bool false
+echo "  Require password after screen saver starts (this will ask for your password)"
+sysadminctl -screenLock 5 -password -
 
 
 echo "Configuring Safari"
