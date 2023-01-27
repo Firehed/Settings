@@ -12,11 +12,10 @@ defaults write -g NSAutomaticCapitalizationEnabled -bool false
 echo "  Disable two spaces to period"
 defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
 echo "  Adding keyboard shortcuts for navigating tabs"
-defaults write -g NSUserKeyEquivalents -dict \
-    "Select Next Tab" "@~\\U2192" \
-    "Select Previous Tab" "@~\\U2190" \
-    "Show Next Tab" "@~\\U2192" \
-    "Show Previous Tab" "@~\\U2190"
+defaults write -g NSUserKeyEquivalents -dict-add "Select Next Tab" "@~\\U2192"
+defaults write -g NSUserKeyEquivalents -dict-add "Select Previous Tab" "@~\\U2190"
+defaults write -g NSUserKeyEquivalents -dict-add "Show Next Tab" "@~\\U2192"
+defaults write -g NSUserKeyEquivalents -dict-add "Show Previous Tab" "@~\\U2190"
 
 
 echo "Configuring Safari"
