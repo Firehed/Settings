@@ -34,6 +34,27 @@ echo "    Develop menu needs manual configuration, it won't work here"
 # Leave this off - debug is for developrs OF Safari
 # defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
+echo "Configuring Finder"
+echo "  Various drives on Desktop"
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+echo "  Status bar"
+defaults write com.apple.finder ShowStatusBar -bool true
+echo "  Path bar"
+defaults write com.apple.finder ShowPathbar -bool true
+echo "  New windows open to $HOME"
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+echo "  Use column view"
+defaults write com.apple.finder FXPreferredViewStyle clmv
+defaults write com.apple.finder ShowSidebar -bool true
+
+echo "Dock"
+echo "  Top right hot corner: lock screen"
+defaults write com.apple.dock wvous-tr-corner -int 13
+defaults write com.apple.dock wvous-tr-modifier -int 0
 
 echo "Configuring iTerm2"
 defaults write com.googlecode.iterm2 PrefsCustomFolder $HOME/dev/github/firehed/settings/iterm
