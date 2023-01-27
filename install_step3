@@ -16,7 +16,7 @@ defaults write -g NSUserKeyEquivalents -dict-add "Select Next Tab" "@~\\U2192"
 defaults write -g NSUserKeyEquivalents -dict-add "Select Previous Tab" "@~\\U2190"
 defaults write -g NSUserKeyEquivalents -dict-add "Show Next Tab" "@~\\U2192"
 defaults write -g NSUserKeyEquivalents -dict-add "Show Previous Tab" "@~\\U2190"
-echo "Don't show slow thumbnail when taking screenshots"
+echo "  Don't show slow thumbnail when taking screenshots"
 defaults write com.apple.screencapture show-thumbnail -bool false
 
 
