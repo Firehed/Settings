@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-echo "Installing Homebrew utilities"
 # validate brew is installed
 
-echo "Installing Homebrew casks"
-# install a bunch of homebrew components
+echo "Installing Homebrew utilities"
 brew install \
     composer \
+    fpp \
+    # Github CLI
     gh \
     gpg \
     jq \
@@ -16,9 +16,12 @@ brew install \
     ripgrep \
     tree
 
+echo "Installing Homebrew casks"
 brew install --cask \
     docker \
     iterm2 \
+    # Mouse scroll direction
+    linearmouse \
+    # Window manager
     rectangle \
-    sequel-ace \
-    linearmouse
+    sequel-ace
