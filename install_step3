@@ -59,6 +59,8 @@ defaults write com.apple.finder FXPreferredViewStyle clmv
 defaults write com.apple.finder ShowSidebar -bool true
 
 echo "Dock"
+# Values for hot corners
+# https://github.com/mathiasbynens/dotfiles/blob/66ba9b3cc0ca1b29f04b8e39f84e5b034fdb24b6/.macos#L437-L448
 echo "  Top right hot corner: lock screen"
 defaults write com.apple.dock wvous-tr-corner -int 13
 defaults write com.apple.dock wvous-tr-modifier -int 0
@@ -70,3 +72,9 @@ defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 echo "Restarting applications"
 killall Finder
 killall Dock
+
+echo ""
+echo "Do these by hand - automation isn't figured out yet:"
+echo " - Remap caps lock to escape"
+echo " - Enable Develop menu in Safari"
+echo " - LinearMouse > Launch at Startup"
