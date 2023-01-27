@@ -22,7 +22,7 @@ echo "  Require password after screen saver starts (this will ask for your passw
 sysadminctl -screenLock 5 -password -
 
 
-echo "Configuring Safari"
+echo "Safari"
 defaults write -app Safari AlwaysRestoreSessionAtLaunch -bool true
 defaults write -app Safari ExcludePrivateWindowWhenRestoringSessionAtLaunch -bool true
 defaults write -app Safari FindOnPageMatchesWordStartsOnly -bool false
@@ -38,7 +38,7 @@ echo "    Develop menu needs manual configuration, it won't work here"
 # Leave this off - debug is for developrs OF Safari
 # defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
-echo "Configuring Finder"
+echo "Finder"
 echo "  Various drives on Desktop"
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
 defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
@@ -60,7 +60,7 @@ echo "  Top right hot corner: lock screen"
 defaults write com.apple.dock wvous-tr-corner -int 13
 defaults write com.apple.dock wvous-tr-modifier -int 0
 
-echo "Configuring iTerm2"
+echo "iTerm2"
 defaults write com.googlecode.iterm2 PrefsCustomFolder $HOME/dev/github/firehed/settings/iterm
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
