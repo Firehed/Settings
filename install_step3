@@ -4,13 +4,14 @@ echo "Step 3 - Configuring"
 echo "Closing System Settings"
 killall "System Settings"
 
-echo "Disable autocorrect"
+echo "System-wide preferences"
+echo "  Disable autocorrect"
 defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
-echo "Disable automatic capitalization"
+echo "  Disable automatic capitalization"
 defaults write -g NSAutomaticCapitalizationEnabled -bool false
-echo "Disable two spaces to period"
+echo "  Disable two spaces to period"
 defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
-echo "Adding arrow key tab mappings"
+echo "  Adding keyboard shortcuts for navigating tabs"
 defaults write -g NSUserKeyEquivalents -dict \
     "Select Next Tab" "@~\\U2192" \
     "Select Previous Tab" "@~\\U2190" \
