@@ -12,10 +12,16 @@ defaults write -g NSAutomaticCapitalizationEnabled -bool false
 echo "  Disable two spaces to period"
 defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
 echo "  Adding keyboard shortcuts for navigating tabs"
+# These may still not be working, or need a reboot first?
 defaults write -g NSUserKeyEquivalents -dict-add "Select Next Tab" "@~\\U2192"
 defaults write -g NSUserKeyEquivalents -dict-add "Select Previous Tab" "@~\\U2190"
 defaults write -g NSUserKeyEquivalents -dict-add "Show Next Tab" "@~\\U2192"
 defaults write -g NSUserKeyEquivalents -dict-add "Show Previous Tab" "@~\\U2190"
+# echo " Keyboard > Keyboard Navigation (tab is useful)"
+# defaults write -g AppleKeyboardUIMode -int 2
+# echo "  Screen saver requires password after 5sec"
+# defaults write com.apple.screensaver askForPassword -int 1
+# defaults write com.apple.screensaver askForPasswordDelay -int 5
 echo "  Don't show slow thumbnail when taking screenshots"
 defaults write com.apple.screencapture show-thumbnail -bool false
 echo "  Require password after screen saver starts (this will ask for your password)"
@@ -32,12 +38,11 @@ defaults write -app Safari ShowOverlayStatusBar -bool true
 echo "  Make tab key useful"
 defaults write -app Safari WebKitPreferences.tabFocusesLinks -bool true
 defaults write -app Safari WebKitTabToLinksPreferenceKey -bool true
-echo "  Dev Tools"
+# echo "  Dev Tools"
 # These do not appear to work, despite diffing the plist
 # defaults write -app Safari IncludeDevelopMenu -bool true
 # defaults write -app Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
 # defaults write -app Safari WebKitPreferences.developerExtrasEnabled -bool true
-echo "    Develop menu needs manual configuration, it won't work here"
 # Leave this off - debug is for developrs OF Safari
 # defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
 
@@ -69,6 +74,11 @@ echo "iTerm2"
 defaults write com.googlecode.iterm2 PrefsCustomFolder $HOME/dev/github/firehed/settings/iterm
 defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
 
+# Calendar
+# Week view
+# Show calendar list
+# TZ support on
+
 echo "Restarting applications"
 killall Finder
 killall Dock
@@ -78,3 +88,10 @@ echo "Do these by hand - automation isn't figured out yet:"
 echo " - Remap caps lock to escape"
 echo " - Enable Develop menu in Safari"
 echo " - LinearMouse > Launch at Startup"
+echo " - Screen saver & display sleep time"
+echo " - iMessage in the cloud on, read receipts off"
+echo " - Safar: disable location everywhere"
+echo " - Safar: disable notifications everywhere"
+echo " - Zoom?"
+
+echo " - Wave Link & Stream Deck; noise gate"
