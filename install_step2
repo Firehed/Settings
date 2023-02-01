@@ -5,8 +5,7 @@ echo "Installing Homebrew utilities"
 brew install \
     composer \
     fpp \
-    # Github CLI
-    gh \
+    gh `# Github CLI` \
     gpg \
     jq \
     kubectl \
@@ -14,14 +13,13 @@ brew install \
     npm \
     php \
     ripgrep \
-    tree
+    tree \
+    yarn
 
 echo "Installing Homebrew casks"
 brew install --cask \
     docker \
     iterm2 \
-    # Mouse scroll direction
-    linearmouse \
-    # Window manager
-    rectangle \
+    linearmouse `# Mouse scroll direction` \
+    rectangle `# Window manager` \
     sequel-ace
