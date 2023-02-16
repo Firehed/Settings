@@ -98,5 +98,8 @@ echo " - iMessage in the cloud on, read receipts off"
 echo " - Safar: disable location everywhere"
 echo " - Safar: disable notifications everywhere"
 echo " - Zoom?"
-
+echo " - Dock > Recents > None"
+echo " - Dock > Displays have Separate Spaces > Off"
 echo " - Wave Link & Stream Deck; noise gate"
+
+echo " - Open Photos.app & turn on iCloud Photos"
