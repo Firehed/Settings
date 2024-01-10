@@ -3,6 +3,6 @@
 set -e
 set -o pipefail
 
-./install_step1
+./install_step1_homebrew
 ./install_step2
 ./install_step3
