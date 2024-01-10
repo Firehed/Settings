@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+echo "PHP"
+brew install php
+
+echo "PHP: APCU"
+brew install pcre2
+pecl install apcu
+
+echo "PHP: Memcached"
+
+echo '*************************************************'
+echo '* YOU MUST PROVIDE SETTINGS FOR ZLIB            *'
+echo '* On `zlib directory [no]:`, set the following: *'
+echo '* Apple Silicon: `/opt/homebrew/opt/zlib`       *'
+echo '* Intel: `/usr/local/opt/zlib`                  *'
+echo '*************************************************'
+echo 'https://rocketee.rs/install-php-memcached-extension-on-macos'
+
+brew install memcached libmemcached zlib pkg-config
+pecl install memcached
