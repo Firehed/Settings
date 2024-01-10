@@ -5,4 +5,4 @@ set -o pipefail
 
 ./install_step1_homebrew
 ./install_step2_brew_cask_mas
-./install_step3
+./install_step3_defaultswrite
