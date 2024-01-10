@@ -13,7 +13,6 @@ brew install \
     kustomize \
     mas `# Mac App Store CLI` \
     npm \
-    php \
     ripgrep \
     tree \
     yarn
