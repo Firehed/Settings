@@ -3,6 +3,6 @@
 set -e
 set -o pipefail
 
-./install_step1_homebrew
-./install_step2_brew_cask_mas
-./install_step3_defaultswrite
+./install/setup_homebrew
+./install/brew_cask_mas
+./install/defaultswrite
