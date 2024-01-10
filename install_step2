@@ -3,6 +3,7 @@
 
 echo "Installing Homebrew utilities"
 brew install \
+    cloc \
     composer \
     fpp \
     gh `# Github CLI` \
