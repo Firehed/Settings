@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
+set -e
 
 echo "PHP"
 brew install php
 
 echo "PHP: APCU"
 brew install pcre2
+# Fix pcre2's install directory
+PHP_VERSION=$(php -r 'echo PHP_VERSION;');
+PCRE_VERSION=$(pcre2test -version | cut -d ' ' -f 3)
+ln -s /opt/homebrew/Cellar/pcre2/$PCRE_VERSION/include/pcre2.h /opt/homebrew/Cellar/php/$PHP_VERSION/include/php/ext/pcre/pcre2.h
 pecl install apcu
 
 echo "PHP: Memcached"
