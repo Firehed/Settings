@@ -103,3 +103,5 @@ echo " - Dock > Displays have Separate Spaces > Off"
 echo " - Wave Link & Stream Deck; noise gate"
 
 echo " - Open Photos.app & turn on iCloud Photos"
+# ??
+echo " - Settings > Desktop & Dock > Displays have separate Spaces: On; Automatically rearrange: off"
