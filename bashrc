@@ -69,7 +69,18 @@ alias gs="git status"
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias gpr="git pull --rebase"
-alias clc="git rev-parse HEAD | tr -d '\n' | pbcopy" # copy last commit
+
+copy_last_commit() {
+    local commit
+    commit=$(git rev-parse HEAD 2>/dev/null)
+    if [[ -z $commit ]]; then
+        echo "Not in a git repository"
+        return 1
+    fi
+    echo -n "$commit" | pbcopy
+    echo -n "$commit (copied to clipboard)"
+}
+alias clc=copy_last_commit
 
 
 # OS X uses different syntax for some commands :/
