@@ -12,6 +12,7 @@ brew install \
     kubectl \
     kustomize \
     mas `# Mac App Store CLI` \
+    mysql-client `# Mysqldump, etc` \
     npm \
     ripgrep \
     tree \
@@ -53,3 +54,15 @@ mas install \
     1518036000 `# Sequel Ace` \
     803453959 `# Slack` \
     497799835 `# Xcode`
+
+
+
+# If you need to have mysql-client first in your PATH, run:
+#   echo 'export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"' >> /Users/firehed/.bash_profile
+
+# For compilers to find mysql-client you may need to set:
+#   export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
+#   export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
+
+# For pkg-config to find mysql-client you may need to set:
+#   export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"
