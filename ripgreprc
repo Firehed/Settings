@@ -6,6 +6,15 @@
 
 # Filter out certain generated & compiled files
 --glob=!yarn.lock
+--glob=!package-lock.json
 --glob=!composer.lock
 --glob=!*.js.map
 --glob=!phpstan-baseline.neon
+
+# And SVGs
+--glob=!*.svg
+
+# Include hidden
+--hidden
+# But still keep out .git
+--glob=!.git/*
