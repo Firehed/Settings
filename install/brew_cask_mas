@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+# validate brew is installed
+
+echo "Installing Homebrew utilities"
+brew install \
+    cloc \
+    composer \
+    fpp \
+    gh `# Github CLI` \
+    gpg \
+    jq \
+    kubectl \
+    kustomize \
+    mas `# Mac App Store CLI` \
+    npm \
+    ripgrep \
+    tree \
+    yarn
+
+echo "Installing Homebrew casks"
+brew install --cask \
+    docker \
+    iterm2 \
+    linearmouse `# Mouse scroll direction` \
+    rectangle `# Window manager` \
+    sequel-ace
+
+echo "Adding more Homebrew 'taps'"
+brew tap homebrew/cask-drivers
+brew install elgato-stream-deck elgato-wave-link
+# stream deck plugins?
+# - world time
+# - zoom
+# - pihole
+# - audio mute
+# - wave link
+
+# renegate settings:
+# ????
+# attack ~ 30ms
+# release ~ 30ms
+# threshold around -27dB
+#
+# input gain 50%
+#
+# App Store ~ CLI Wrapper
+mas install \
+    1333542190 `# 1Password` \
+    1440147259 `# AdGuard for Safari` \
+    937984704 `# Amphetamine` \
+    1342896380 `# Hex fiend` \
+    1544743900 `# Hush` \
+    1518036000 `# Sequel Ace` \
+    803453959 `# Slack` \
+    497799835 `# Xcode`
