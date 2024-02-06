@@ -69,6 +69,7 @@ alias gs="git status"
 alias gd="git diff"
 alias gdc="git diff --cached"
 alias gpr="git pull --rebase"
+alias clc="git rev-parse HEAD | tr -d '\n' | pbcopy" # copy last commit
 
 
 # OS X uses different syntax for some commands :/
