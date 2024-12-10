@@ -36,6 +36,9 @@ export HOMEBREW_NO_ANALYTICS=1
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Docker
+export COMPOSE_MENU=0
+
 # Composer
 export COMPOSER_IGNORE_PLATFORM_REQS=1
 
