@@ -83,7 +83,7 @@ copy_last_commit() {
     # Display some info to show you got the right thing
     git show --quiet
     echo -n "$commit" | pbcopy
-    echo -n "Commit $commit copied to clipboard"
+    echo "Commit $commit copied to clipboard"
 }
 alias clc=copy_last_commit
 
