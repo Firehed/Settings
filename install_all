@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+set -o pipefail
+
+./install/setup_homebrew
+./install/brew_cask_mas
+./install/setup_php
+./install/defaultswrite
