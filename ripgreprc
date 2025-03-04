@@ -18,3 +18,8 @@
 --hidden
 # But still keep out .git
 --glob=!.git/*
+
+# Create a "test" type for common test files, typically for use with -t/-T
+--type-add=test:*.test.*
+--type-add=test:*Test.*
+--type-add=test:*Tests.*
