@@ -30,12 +30,15 @@ __prompt_command() {
 
 export EDITOR=vim
 
-# Homebrew
-export HOMEBREW_NO_AUTO_UPGRADE=1
+# Homebrew - https://docs.brew.sh/Manpage#environment
+export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_INSTALL_UPGRADE=1
 export HOMEBREW_NO_ANALYTICS=1
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Docker
+export COMPOSE_MENU=0
 
 # Composer
 export COMPOSER_IGNORE_PLATFORM_REQS=1
@@ -78,8 +81,10 @@ copy_last_commit() {
         echo "Not in a git repository"
         return 1
     fi
+    # Display some info to show you got the right thing
+    git show --quiet
     echo -n "$commit" | pbcopy
-    echo -n "$commit (copied to clipboard)"
+    echo "Commit $commit copied to clipboard"
 }
 alias clc=copy_last_commit
 
