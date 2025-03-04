@@ -32,6 +32,7 @@ export EDITOR=vim
 
 # Homebrew - https://docs.brew.sh/Manpage#environment
 export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_NO_INSTALL_UPGRADE=1
 export HOMEBREW_NO_ANALYTICS=1
 # Set PATH, MANPATH, etc., for Homebrew.
 eval "$(/opt/homebrew/bin/brew shellenv)"
