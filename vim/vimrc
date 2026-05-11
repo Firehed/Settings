@@ -105,6 +105,7 @@ set number
 set list
 set listchars=tab:▸\ ,eol:¬
 set noswapfile
+set spell spelllang=en_us
 
 " Move by screen line not file line
 nnoremap j gj
