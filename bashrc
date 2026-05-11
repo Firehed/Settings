@@ -30,6 +30,13 @@ __prompt_command() {
 
 export EDITOR=vim
 
+# Telemetry opt-outs
+## Generalized var for things that use it
+export DO_NOT_TRACK=true
+# Github
+export GH_TELEMETRY=false
+
+
 # Homebrew - https://docs.brew.sh/Manpage#environment
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_INSTALL_UPGRADE=1
