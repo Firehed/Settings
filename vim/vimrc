@@ -154,6 +154,7 @@ nnoremap <C-}> :ALEGoToDefinition -vsplit<CR>
 " Go to next/prev errors
 nnoremap <C-j> :ALENextWrap<CR>
 nnoremap <C-k> :ALEPreviousWrap<CR>
+nnoremap <leader>h :ALEHover<CR>
 
 " ALE settings
 if v:version < 800
