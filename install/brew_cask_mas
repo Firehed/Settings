@@ -1,0 +1,68 @@
+#!/usr/bin/env bash
+# validate brew is installed
+
+echo "Installing Homebrew utilities"
+brew install \
+    cloc \
+    composer \
+    fpp \
+    gh `# Github CLI` \
+    gpg \
+    jq \
+    kubectl \
+    kustomize \
+    mas `# Mac App Store CLI` \
+    mysql-client `# Mysqldump, etc` \
+    npm \
+    ripgrep \
+    tree \
+    yarn
+
+echo "Installing Homebrew casks"
+brew install --cask \
+    docker \
+    iterm2 \
+    linearmouse `# Mouse scroll direction` \
+    rectangle `# Window manager` \
+    sequel-ace
+
+echo "Adding more Homebrew 'taps'"
+brew tap homebrew/cask-drivers
+brew install elgato-stream-deck elgato-wave-link
+# stream deck plugins?
+# - world time
+# - zoom
+# - pihole
+# - audio mute
+# - wave link
+
+# renegate settings:
+# ????
+# attack ~ 30ms
+# release ~ 30ms
+# threshold around -27dB
+#
+# input gain 50%
+#
+# App Store ~ CLI Wrapper
+mas install \
+    1333542190 `# 1Password` \
+    1440147259 `# AdGuard for Safari` \
+    937984704 `# Amphetamine` \
+    1342896380 `# Hex fiend` \
+    1544743900 `# Hush` \
+    1518036000 `# Sequel Ace` \
+    803453959 `# Slack` \
+    497799835 `# Xcode`
+
+
+
+# If you need to have mysql-client first in your PATH, run:
+#   echo 'export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"' >> /Users/firehed/.bash_profile
+
+# For compilers to find mysql-client you may need to set:
+#   export LDFLAGS="-L/opt/homebrew/opt/mysql-client/lib"
+#   export CPPFLAGS="-I/opt/homebrew/opt/mysql-client/include"
+
+# For pkg-config to find mysql-client you may need to set:
+#   export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql-client/lib/pkgconfig"

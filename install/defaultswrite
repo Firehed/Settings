@@ -1,0 +1,107 @@
+#!/usr/bin/env bash
+
+# Various plist resources
+# https://gist.github.com/ChristopherA/98628f8cd00c94f11ee6035d53b0d3c6
+# https://github.com/mathiasbynens/dotfiles/blob/66ba9b3cc0ca1b29f04b8e39f84e5b034fdb24b6/.macos#L437-L448
+
+echo "Step 3 - Configuring"
+
+echo "Closing System Settings"
+killall "System Settings"
+
+echo "System-wide preferences"
+echo "  Disable autocorrect"
+defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+echo "  Disable automatic capitalization"
+defaults write -g NSAutomaticCapitalizationEnabled -bool false
+echo "  Disable two spaces to period"
+defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
+echo "  Adding keyboard shortcuts for navigating tabs"
+# These may still not be working, or need a reboot first?
+defaults write -g NSUserKeyEquivalents -dict-add "Select Next Tab" "@~\\U2192"
+defaults write -g NSUserKeyEquivalents -dict-add "Select Previous Tab" "@~\\U2190"
+defaults write -g NSUserKeyEquivalents -dict-add "Show Next Tab" "@~\\U2192"
+defaults write -g NSUserKeyEquivalents -dict-add "Show Previous Tab" "@~\\U2190"
+# echo " Keyboard > Keyboard Navigation (tab is useful)"
+# defaults write -g AppleKeyboardUIMode -int 2
+# echo "  Screen saver requires password after 5sec"
+# defaults write com.apple.screensaver askForPassword -int 1
+# defaults write com.apple.screensaver askForPasswordDelay -int 5
+echo "  Don't show slow thumbnail when taking screenshots"
+defaults write com.apple.screencapture show-thumbnail -bool false
+echo "  Require password after screen saver starts (this will ask for your password)"
+sysadminctl -screenLock 5 -password -
+
+
+echo "Safari"
+defaults write -app Safari AlwaysRestoreSessionAtLaunch -bool true
+defaults write -app Safari ExcludePrivateWindowWhenRestoringSessionAtLaunch -bool true
+defaults write -app Safari FindOnPageMatchesWordStartsOnly -bool false
+defaults write -app Safari OpenPrivateWindowWhenNotRestoringSessionAtLaunch -bool false
+defaults write -app Safari ShowFullURLInSmartSearchField -bool true
+defaults write -app Safari ShowOverlayStatusBar -bool true
+echo "  Make tab key useful"
+defaults write -app Safari WebKitPreferences.tabFocusesLinks -bool true
+defaults write -app Safari WebKitTabToLinksPreferenceKey -bool true
+# echo "  Dev Tools"
+# These do not appear to work, despite diffing the plist
+# defaults write -app Safari IncludeDevelopMenu -bool true
+# defaults write -app Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+# defaults write -app Safari WebKitPreferences.developerExtrasEnabled -bool true
+# Leave this off - debug is for developrs OF Safari
+# defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+
+echo "Finder"
+echo "  Various drives on Desktop"
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool true
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+echo "  Status bar"
+defaults write com.apple.finder ShowStatusBar -bool true
+echo "  Path bar"
+defaults write com.apple.finder ShowPathbar -bool true
+echo "  New windows open to $HOME"
+defaults write com.apple.finder NewWindowTarget -string "PfHm"
+defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+echo "  Use column view"
+defaults write com.apple.finder FXPreferredViewStyle clmv
+defaults write com.apple.finder ShowSidebar -bool true
+
+echo "Dock"
+# Values for hot corners
+# https://github.com/mathiasbynens/dotfiles/blob/66ba9b3cc0ca1b29f04b8e39f84e5b034fdb24b6/.macos#L437-L448
+echo "  Top right hot corner: lock screen"
+defaults write com.apple.dock wvous-tr-corner -int 13
+defaults write com.apple.dock wvous-tr-modifier -int 0
+
+echo "iTerm2"
+defaults write com.googlecode.iterm2 PrefsCustomFolder $HOME/dev/github/firehed/settings/iterm
+defaults write com.googlecode.iterm2 LoadPrefsFromCustomFolder -bool true
+
+# Calendar
+# Week view
+# Show calendar list
+# TZ support on
+
+echo "Restarting applications"
+killall Finder
+killall Dock
+
+echo ""
+echo "Do these by hand - automation isn't figured out yet:"
+echo " - Remap caps lock to escape"
+echo " - Enable Develop menu in Safari"
+echo " - LinearMouse > Launch at Startup"
+echo " - Screen saver & display sleep time"
+echo " - iMessage in the cloud on, read receipts off"
+echo " - Safar: disable location everywhere"
+echo " - Safar: disable notifications everywhere"
+echo " - Zoom?"
+echo " - Dock > Recents > None"
+echo " - Dock > Displays have Separate Spaces > Off"
+echo " - Wave Link & Stream Deck; noise gate"
+
+echo " - Open Photos.app & turn on iCloud Photos"
+# ??
+echo " - Settings > Desktop & Dock > Displays have separate Spaces: On; Automatically rearrange: off"
